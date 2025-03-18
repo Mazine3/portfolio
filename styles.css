@@ -523,3 +523,70 @@ form .btn-primary:hover {
     color: var(--soft-blue);
     transform: scale(1.2);
 }
+
+
+.skills-section {
+    padding: 8rem 0;
+    background: var(--soft-bg);
+}
+
+.skill-card {
+    background: white;
+    padding: 2rem;
+    border-radius: 15px;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+    height: 100%; /* Ensures all cards are the same height */
+}
+
+.skill-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+}
+
+.skill-header {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 1.5rem;
+}
+
+.skill-icon {
+    font-size: 2.5rem;
+    color: var(--soft-blue);
+}
+
+.skill-card h4 {
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: var(--text-color);
+    margin: 0;
+}
+
+.skill-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.skill-list li {
+    font-size: 1.1rem;
+    color: var(--text-color);
+    margin-bottom: 0.75rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.skill-level {
+    font-size: 0.9rem;
+    color: var(--soft-blue);
+    font-weight: 500;
+    background: rgba(162, 213, 242, 0.1); /* Light blue background */
+    padding: 0.2rem 0.5rem;
+    border-radius: 10px;
+}
+.testimonial-text {
+    max-height: 80px;
+}
