@@ -1,0 +1,525 @@
+:root {
+    --soft-blue: #a2d5f2; /* Soft blue */
+    --light-purple: #c7b9ff; /* Light purple */
+    --soft-bg: #f0f4f8; /* Very light gray-blue background */
+    --text-color: #2c3e50; /* Dark blue-gray for text */
+    --dark-bg: #1a1a2e; /* Dark background for hero section */
+}
+
+body {
+    background: var(--soft-bg);
+    color: var(--text-color);
+    font-family: 'Inter', sans-serif;
+    overflow-x: hidden;
+}
+
+/* Improved Navigation */
+.navbar {
+    background: white; /* White navbar */
+    backdrop-filter: blur(10px);
+    padding: 1rem 0;
+    padding: 0.5rem 1rem;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.navbar-brand img {
+    height: 40px; /* Adjust logo height */
+}
+
+.nav-link {
+    color: var(--text-color) !important; /* Dark text for nav links */
+    position: relative;
+    margin: 0 1rem;
+    font-weight: 500;
+}
+
+.nav-link::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    bottom: -5px;
+    left: 0;
+    background: var(--soft-blue);
+    transition: 0.3s;
+}
+
+.nav-link:hover::after {
+    width: 100%;
+}
+
+/* Hero Section */
+.hero-section {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    background: var(--dark-bg); /* Dark background */
+    position: relative;
+    overflow: hidden;
+}
+
+.ai-heading {
+    font-size: 4rem;
+    font-weight: 700;
+    background: linear-gradient(45deg, var(--soft-blue), var(--light-purple));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    line-height: 1.2;
+    margin-bottom: 1.5rem;
+}
+
+.hero-subtitle {
+    font-size: 1.5rem;
+    color: rgba(255, 255, 255, 0.9);
+    margin-bottom: 2rem;
+}
+
+/* About Me Section */
+.about-section {
+    padding: 8rem 0;
+    background: white;
+}
+
+.about-content {
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.about-content p {
+    font-size: 1.1rem;
+    line-height: 1.8;
+    color: var(--text-color);
+    opacity: 0.9;
+}
+
+/* Skills Section */
+.skills-section {
+    padding: 8rem 0;
+    background: var(--soft-bg);
+}
+
+.skill-card {
+    background: white;
+    padding: 2rem;
+    border-radius: 15px;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+}
+
+.skill-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+}
+
+.skill-icon {
+    font-size: 2rem;
+    color: var(--soft-blue);
+    margin-bottom: 1rem;
+}
+
+/* Testimonials Section */
+.testimonials-section {
+    padding: 8rem 0;
+    background: white;
+}
+
+.testimonial-card {
+    background: white;
+    padding: 2rem;
+    border-radius: 15px;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.testimonial-text {
+    font-size: 1.1rem;
+    line-height: 1.8;
+    color: var(--text-color);
+    opacity: 0.9;
+}
+
+.testimonial-author {
+    font-weight: 600;
+    color: var(--soft-blue);
+}
+
+/* Footer */
+.footer {
+    padding: 4rem 0;
+    background: var(--dark-bg);
+    color: white;
+    text-align: center;
+}
+
+.footer a {
+    color: var(--soft-blue);
+    text-decoration: none;
+    margin: 0 0.5rem;
+}
+
+.footer a:hover {
+    color: var(--light-purple);
+}
+
+/* Particles */
+#particles-js {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    z-index: 1;
+}
+
+/* General Animations */
+[data-aos] {
+    transition: opacity 0.8s, transform 0.8s;
+}
+
+.section-title {
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin-bottom: 4rem;
+    position: relative;
+    display: inline-block;
+    color: var(--text-color);
+}
+
+.section-title::after {
+    content: '';
+    position: absolute;
+    bottom: -15px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 60px;
+    height: 3px;
+    background: var(--soft-blue);
+}
+
+.profile-image {
+    border-radius: 50%;
+    max-width: 400px; /* Reduced from 400px to make it a little smaller */
+    width: 100%;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+}
+
+.hero-content {
+            position: relative;
+            z-index: 2;
+        }
+        
+/* Contact Section Styling */
+.contact-section {
+    background: #f8f9fa; /* Soft gray background */
+    padding: 8rem 0; /* Generous vertical spacing */
+}
+
+.contact-card {
+    background: white; /* Clean white card */
+    border-radius: 15px; /* Rounded corners */
+    border: 1px solid rgba(0, 0, 0, 0.1); /* Subtle border */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05); /* Light shadow */
+}
+
+.section-title {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: #2c3e50; /* Dark, elegant color */
+}
+
+.contact-list li {
+    font-size: 1.2rem; /* Readable size */
+    color: #333; /* Soft dark text */
+}
+
+.contact-link {
+    color: #3498db; /* Soft blue for links */
+    text-decoration: none; /* No underline */
+    transition: color 0.3s ease; /* Smooth color transition */
+}
+
+.contact-link:hover {
+    color: #9b59b6; /* Light purple on hover */
+}
+
+.contact-link i {
+    color: #3498db; /* Match link color */
+    transition: transform 0.3s ease; /* Smooth icon animation */
+}
+
+.contact-link:hover i {
+    transform: scale(1.2); /* Slight icon enlargement on hover */
+}
+
+/* Optional Form Styling */
+form .form-control {
+    border-radius: 8px;
+    border: 1px solid #ddd;
+    padding: 0.75rem;
+}
+
+form .btn-primary {
+    background: #3498db;
+    border: none;
+    border-radius: 8px;
+    padding: 0.75rem;
+    font-weight: 600;
+    transition: background 0.3s ease;
+}
+
+form .btn-primary:hover {
+    background: #2980b9; /* Darker blue on hover */
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 768px) {
+    .contact-card {
+        padding: 3rem 2rem; /* Reduced padding on mobile */
+    }
+    .contact-list li {
+        font-size: 1rem; /* Slightly smaller text */
+    }
+    .section-title {
+        font-size: 2rem; /* Adjusted title size */
+    }
+}
+
+.testimonial-text {
+    font-size: 1.1rem;
+    line-height: 1.8;
+    color: var(--text-color);
+    opacity: 0.9;
+    max-height: 100px; /* Adjust this value based on how much text you want to show initially */
+    overflow: hidden;
+    transition: max-height 0.3s ease;
+}
+
+.testimonial-text.expanded {
+    max-height: none;
+}
+
+.read-more-btn {
+    padding: 0;
+    color: var(--soft-blue);
+    text-decoration: none;
+    font-size: 0.9rem;
+}
+.read-more-btn:hover {
+    color: var(--light-purple);
+}
+
+.carousel-control-prev,
+.carousel-control-next {
+    display: block; /* Ensure they are visible by default */
+    opacity: 0.7; /* Optional: Adjust transparency */
+    transition: opacity 0.3s ease;
+}
+
+.carousel-control-prev:hover,
+.carousel-control-next:hover {
+    opacity: 1; /* Full opacity on hover */
+}
+
+.carousel-control-prev,
+.carousel-control-next {
+    width: 5%; /* Adjust width to position them further out */
+    opacity: 0.7;
+    transition: opacity 0.3s ease;
+    top: 50%; /* Center vertically */
+    transform: translateY(-50%);
+}
+
+.carousel-control-prev {
+    left: -50px; /* Move outside the container to the left */
+}
+
+.carousel-control-next {
+    right: -50px; /* Move outside the container to the right */
+}
+
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+    background-image: none; /* Remove default Bootstrap arrow */
+    width: 30px;
+    height: 30px;
+    position: relative;
+}
+
+.carousel-control-prev-icon::before,
+.carousel-control-next-icon::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 20px;
+    height: 20px;
+    border: solid var(--soft-blue);
+    border-width: 0 3px 3px 0;
+    display: inline-block;
+    padding: 3px;
+    transform-origin: center;
+}
+
+.carousel-control-prev-icon::before {
+    transform: translate(-50%, -50%) rotate(135deg); /* Left arrow */
+}
+
+.carousel-control-next-icon::before {
+    transform: translate(-50%, -50%) rotate(-45deg); /* Right arrow */
+}
+
+.carousel-control-prev:hover,
+.carousel-control-next:hover {
+    opacity: 1;
+}
+
+.carousel-control-prev:hover .carousel-control-prev-icon::before,
+.carousel-control-next:hover .carousel-control-next-icon::before {
+    border-color: #76b8e5; /* Darker shade on hover */
+}
+
+
+.about-section .list-unstyled li {
+    font-size: 1.1rem;
+    line-height: 1.8;
+    color: var(--text-color);
+    margin-bottom: 0.5rem;
+}
+
+.about-section .contact-link {
+    color: var(--soft-blue);
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.about-section .contact-link:hover {
+    color: var(--light-purple);
+}
+
+.about-section .btn-primary {
+    background: var(--soft-blue);
+    border: none;
+    padding: 0.75rem 1.5rem;
+    font-weight: 600;
+    transition: background 0.3s ease;
+}
+
+.about-section .btn-primary:hover {
+    background: #76b8e5; /* Darker shade of soft blue */
+}
+
+.about-section img {
+    border-radius: 15px; /* Matches other card styles */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+
+.about-section .about-content p {
+    font-size: 1.1rem;
+    line-height: 1.8;
+    color: var(--text-color);
+    opacity: 0.9;
+    margin-bottom: 1.5rem;
+}
+
+.about-section .row p {
+    font-size: 1.1rem;
+    line-height: 1.8;
+    color: var(--text-color);
+    margin-bottom: 0.5rem;
+}
+
+.about-section .contact-link {
+    color: var(--soft-blue);
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.about-section .contact-link:hover {
+    color: var(--light-purple);
+}
+
+.about-section .btn-primary {
+    background: var(--soft-blue);
+    border: none;
+    padding: 0.75rem 1.5rem;
+    font-weight: 600;
+    transition: background 0.3s ease;
+}
+
+.about-section .btn-primary:hover {
+    background: #76b8e5; /* Darker shade of soft blue */
+}
+
+.about-section img {
+    border-radius: 15px; /* Matches other card styles */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.social-icons {
+    display: flex;
+    gap: 1.5rem; /* Space between icons */
+    justify-content: flex-start; /* Align icons to the left */
+}
+
+.social-link {
+    color: rgba(255, 255, 255, 0.8); /* Light color against dark background */
+    font-size: 1.8rem; /* Size of the icons */
+    text-decoration: none;
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.social-link:hover {
+    color: var(--soft-blue); /* Matches your theme on hover */
+    transform: scale(1.2); /* Slight enlargement on hover */
+}
+
+
+.typewriter {
+    overflow: hidden; /* Ensures the text doesn't overflow during animation */
+}
+
+.ai-heading {
+    font-size: 4rem;
+    font-weight: 700;
+    background: linear-gradient(45deg, var(--soft-blue), var(--light-purple));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    line-height: 1.2;
+    margin-bottom: 0; /* Remove extra margin since we control spacing with mb-4 on .typewriter */
+}
+
+.highlight {
+    background: none; /* Reset gradient for the name */
+    -webkit-text-fill-color: white; /* White for emphasis */
+    font-weight: 800; /* Extra bold for your name */
+    text-shadow: 0 0 10px rgba(162, 213, 242, 0.5); /* Soft glow effect */
+}
+
+.hero-subtitle {
+    font-size: 1.5rem;
+    color: rgba(255, 255, 255, 0.9);
+    margin-bottom: 2rem;
+}
+
+.social-icons {
+    display: flex;
+    gap: 1.5rem;
+    justify-content: flex-start;
+}
+
+.social-link {
+    color: rgba(255, 255, 255, 0.8);
+    font-size: 1.8rem;
+    text-decoration: none;
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.social-link:hover {
+    color: var(--soft-blue);
+    transform: scale(1.2);
+}
