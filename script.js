@@ -104,3 +104,48 @@ document.addEventListener('DOMContentLoaded', function() {
     // Start typewriter effect after a slight delay to sync with animation
     setTimeout(typeWriter, 1500); // Starts after 1.5s to follow fade-in
 });
+
+
+
+document.addEventListener('DOMContentLoaded', function() {
+    // Read More functionality for all testimonials
+    const testimonials = document.querySelectorAll('.testimonial-text');
+
+    testimonials.forEach(testimonial => {
+        const fullHeight = testimonial.scrollHeight;
+        const maxHeight = parseInt(window.getComputedStyle(testimonial).maxHeight);
+
+        // Only show "Read More" if text exceeds max-height
+        if (fullHeight > maxHeight) {
+            const button = testimonial.nextElementSibling;
+            if (button && button.classList.contains('read-more-btn')) {
+                button.style.display = 'block'; // Show the button
+
+                // Add click event listener
+                button.addEventListener('click', function() {
+                    if (testimonial.classList.contains('expanded')) {
+                        testimonial.classList.remove('expanded');
+                        button.textContent = 'Read More';
+                    } else {
+                        testimonial.classList.add('expanded');
+                        button.textContent = 'Show Less';
+                    }
+                });
+            }
+        }
+    });
+
+    // Carousel control visibility
+    const carousel = document.querySelector('#testimonialsCarousel');
+    const carouselItems = carousel.querySelectorAll('.carousel-item');
+    const prevButton = carousel.querySelector('.carousel-control-prev');
+    const nextButton = carousel.querySelector('.carousel-control-next');
+
+    if (carouselItems.length > 1) {
+        prevButton.style.display = 'block';
+        nextButton.style.display = 'block';
+    } else {
+        prevButton.style.display = 'none';
+        nextButton.style.display = 'none';
+    }
+});
