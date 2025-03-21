@@ -155,8 +155,8 @@
                             <li>Matplotlib & Seaborn <span class="skill-level">Expert</span></li>
                             <li>Beautifulsoup & Selenium<span class="skill-level">Expert</span></li>
                             <li>NLP & SciPy <span class="skill-level">Advanced</span></li>
-                            <li>Power BI <span class="skill-level">Advanced</span></li>
                             <li>OpenCV <span class="skill-level">Advanced</span></li>
+                            <li>Power BI <span class="skill-level">Advanced</span></li>
                         </ul>
                     </div>
                 </div>
@@ -168,10 +168,12 @@
                             <h4>AI & Machine Learning</h4>
                         </div>
                         <ul class="skill-list">
+                            <li>Generative AI <span class="skill-level">Expert</span></li>
+                            <li>AI agents, LLM, VLM, RAG, TTS<span class="skill-level">Expert</span></li>
+                            <li>NLP (Transformers) <span class="skill-level">Expert</span></li>
                             <li>TensorFlow <span class="skill-level">Expert</span></li>
                             <li>PyTorch <span class="skill-level">Advanced</span></li>
-                            <li>Scikit-learn <span class="skill-level">Expert</span></li>
-                            <li>NLP (Transformers) <span class="skill-level">Advanced</span></li>
+                            <li>Scikit-learn <span class="skill-level">Advanced</span></li>
                             <li>Computer Vision <span class="skill-level">Advanced</span></li>
                             <li>YOLOv9 <span class="skill-level">Advanced</span></li>
                         </ul>
@@ -192,6 +194,22 @@
                         </ul>
                     </div>
                 </div>
+
+                <!-- Category 6: Other Tools -->
+                <div class="col-md-4" data-aos="fade-up" data-aos-delay="600">
+                    <div class="skill-card">
+                        <div class="skill-header">
+                            <i class="bi bi-tools skill-icon"></i>
+                            <h4>Other Tools</h4>
+                        </div>
+                        <ul class="skill-list">
+                            <li>Flask <span class="skill-level">Advanced</span></li>
+                            <li>FastAPI <span class="skill-level">Advanced</span></li>
+                            <li>Git/Gitlab <span class="skill-level">Advanced</span></li>
+                            <li>AWS Basics <span class="skill-level">Intermediate</span></li>
+                        </ul>
+                    </div>
+                </div>
                 <!-- Category 5: Soft Skills -->
                 <div class="col-md-4" data-aos="fade-up" data-aos-delay="500">
                     <div class="skill-card">
@@ -204,21 +222,6 @@
                             <li>Team Collaboration <span class="skill-level">Advanced</span></li>
                             <li>Project Management <span class="skill-level">Advanced</span></li>
                             <li>Communication <span class="skill-level">Advanced</span></li>
-                        </ul>
-                    </div>
-                </div>
-                <!-- Category 6: Other Tools -->
-                <div class="col-md-4" data-aos="fade-up" data-aos-delay="600">
-                    <div class="skill-card">
-                        <div class="skill-header">
-                            <i class="bi bi-tools skill-icon"></i>
-                            <h4>Other Tools</h4>
-                        </div>
-                        <ul class="skill-list">
-                            <li>Git/GitHub <span class="skill-level">Expert</span></li>
-                            <li>Docker <span class="skill-level">Intermediate</span></li>
-                            <li>AWS Basics <span class="skill-level">Intermediate</span></li>
-                            <li>Linux <span class="skill-level">Advanced</span></li>
                         </ul>
                     </div>
                 </div>
@@ -476,9 +479,11 @@
                             </div>
                         </div>
                     </div>
+
                     <!-- Second Slide (1 testimonial) -->
                     <div class="carousel-item">
                         <div class="row g-4 justify-content-center">
+
                             <!-- Testimonial 4 -->
                             <div class="col-md-4" data-aos="fade-up" data-aos-delay="200">
                                 <div class="testimonial-card text-center">
@@ -492,6 +497,7 @@
                                     <p class="testimonial-author">- Refka Frioui</p>
                                 </div>
                             </div>
+                            
                             <!-- Testimonial 5 -->
                             <div class="col-md-4" data-aos="fade-up" data-aos-delay="100">
                                 <div class="testimonial-card text-center">
@@ -534,37 +540,36 @@
             </div>
         </div>
     </section>
-                <!-- Optional Contact Form -->
-                <div class="row justify-content-center mt-5">
-                    <div class="col-md-8">
-                        <h3 class="text-center mb-4">Send a Message</h3>
-                        <form action="your-form-handler" method="post">
-                            <div class="mb-3">
-                                <input type="text" class="form-control" placeholder="Your Name" required>
-                            </div>
-                            <div class="mb-3">
-                                <input type="email" class="form-control" placeholder="Your Email" required>
-                            </div>
-                            <div class="mb-3">
-                                <textarea class="form-control" rows="4" placeholder="Your Message" required></textarea>
-                            </div>
-                            <button type="submit" class="btn btn-primary w-100">Send Message</button>
-                        </form>
-                    </div>
+    <!-- Optional Contact Form -->
+    <section class="contact-section" id="contact">
+        <div class="container">
+            <h2 class="section-title text-center" data-aos="fade-up">Contact Me</h2>
+            <div class="row justify-content-center mt-5">
+                <div class="col-md-8">
+                    <h3 class="text-center mb-4">Send a Message</h3>
+                    <form action="https://formspree.io/f/xyzeepby" method="POST">
+                        <div class="mb-3">
+                            <input type="text" name="name" class="form-control" placeholder="Your Name" required>
+                        </div>
+                        <div class="mb-3">
+                            <input type="email" name="_replyto" class="form-control" placeholder="Your Email" required>
+                        </div>
+                        <div class="mb-3">
+                            <textarea class="form-control" name="message" rows="4" placeholder="Your Message" required></textarea>
+                        </div>
+                        <input type="hidden" name="_subject" value="New Contact Form Submission">
+                        <button type="submit" class="btn btn-primary w-100">Send Message</button>
+                    </form>
                 </div>
             </div>
         </div>
     </section>
 
+
     <!-- Footer -->
     <footer class="footer">
         <div class="container">
             <p>&copy; Developed With LOVE By MHAMED BOUGUERRA.</p>
-            <div class="social-links">
-                <a href="https://github.com/Mazine3"><i class="bi bi-github"></i></a>
-                <a href="https://linkedin.com/in/mhamed-bouguerra/"><i class="bi bi-linkedin"></i></a>
-                <a href="https://twitter.com/yourusername"><i class="bi bi-twitter"></i></a>
-            </div>
         </div>
     </footer>
 
