@@ -149,3 +149,57 @@ document.addEventListener('DOMContentLoaded', function() {
         nextButton.style.display = 'none';
     }
 });
+
+// Updated Testimonial Read More Functionality
+function initializeTestimonialReadMore() {
+    // Target all testimonial cards in BOTH carousel slides
+    document.querySelectorAll('#testimonialsCarousel .testimonial-card').forEach(card => {
+        const textElement = card.querySelector('.testimonial-text');
+        const button = card.querySelector('.read-more-btn');
+        
+        // Force reflow to calculate proper heights
+        void textElement.offsetHeight;
+        
+        const isTruncated = textElement.scrollHeight > textElement.clientHeight;
+        
+        // Toggle button visibility
+        button.style.display = isTruncated ? 'block' : 'none';
+        
+        // Update button text
+        button.textContent = textElement.classList.contains('expanded') 
+            ? 'Read Less' 
+            : 'Read More';
+            
+        // Remove previous event listeners
+        button.replaceWith(button.cloneNode(true));
+        
+        // Add new click handler
+        card.querySelector('.read-more-btn').addEventListener('click', () => {
+            textElement.classList.toggle('expanded');
+            button.textContent = textElement.classList.contains('expanded') 
+                ? 'Read Less' 
+                : 'Read More';
+        });
+    });
+}
+
+// Initialize when page loads
+document.addEventListener('DOMContentLoaded', initializeTestimonialReadMore);
+
+// Re-initialize when carousel slides change
+const carousel = document.getElementById('testimonialsCarousel');
+if (carousel) {
+    carousel.addEventListener('slid.bs.carousel', function() {
+        // Small delay to ensure DOM update
+        setTimeout(initializeTestimonialReadMore, 50);
+    });
+}
+
+button.addEventListener('click', () => {
+    textElement.classList.toggle('expanded');
+    button.textContent = textElement.classList.contains('expanded') 
+        ? 'Read Less' 
+        : 'Read More';
+    // Force color update
+    button.style.color = ''; // Reset to CSS value
+});
